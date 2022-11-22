@@ -114,6 +114,11 @@ while True:
         
     elif(choice==8):
         print('Top 2 high bill')
+        print('Top 2 high bill')
+        sql = "SELECT * FROM `bills` ORDER BY `bill` DESC LIMIT 2"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        print(tabulate(result,headers=['id', 'consumerid', 'month', 'year', 'bill', 'paidstatus', 'billdate',  'totalunit','duedate'])) 
         
     elif(choice==9):
         break
