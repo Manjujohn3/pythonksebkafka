@@ -49,6 +49,15 @@ while True:
     
     elif(choice==4):
         print("update consumer selected")
+        consumerid= input("enter the id:")
+        name = input("enter the name to be updated:")
+        address = input("enter the address to be updated:")
+        phone = input("enter the number to be updated:")
+        emailid = input("enter the email to be updated:")
+        sql = "UPDATE `consumer` SET `name`='"+name+"',`address`='"+address+"',`phone`='"+phone+"',`email`='"+emailid+"' WHERE `consumerid` = " +consumerid
+        mycursor.execute(sql)
+        mydb.commit()
+        print("updated succusfully")
 
     elif(choice==5):
         print("view all consumer selected")
