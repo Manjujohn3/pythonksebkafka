@@ -61,6 +61,11 @@ while True:
 
     elif(choice==5):
         print("view all consumer selected")
+        sql = 'SELECT * FROM `consumer`'
+        mycursor.execute(sql)
+        result =  mycursor.fetchall()
+        for i in result:
+            print(i)
 
 
     elif(choice==6):
