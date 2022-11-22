@@ -40,6 +40,11 @@ while True:
         
     elif(choice==3):
         print("delete consumer selected")
+        consumerid = input("enter the id: ")
+        sql = 'DELETE FROM `consumer` WHERE consumerid='+consumerid
+        mycursor.execute(sql)
+        mydb.commit()
+        print("data deleted successfully")
     
     
     elif(choice==4):
